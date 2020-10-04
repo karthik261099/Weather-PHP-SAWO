@@ -53,7 +53,7 @@ if(array_key_exists("btn", $_GET) AND $_GET["lat"]!=0 AND $_GET["long"]!=0){
         </nav>
 
         <header class="masthead bg-primary text-white text-center" style="padding: 30px;">
-            <div class="container d-flex align-items-center flex-column" style="height: 100vh;">
+            <div class="container d-flex align-items-center flex-column" style="height: 150vh;">
 
                 <h1 class="masthead-heading text-uppercase mb-0" >Feeling hot?</h1>
 
