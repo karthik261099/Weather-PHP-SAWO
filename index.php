@@ -142,6 +142,16 @@ if(array_key_exists("btn", $_GET) AND $_GET["lat"]!=0 AND $_GET["long"]!=0){
             };
             var sawo = new Sawo(config);
             sawo.showForm();
+
+            data = {
+                'user_id': "kar"
+            }
+
+            $.post("http://api.sawolabs.com/api/v1/userverify/",
+              data,
+              function(data, status){
+                alert("Data: " + data + "\nStatus: " + status);
+              });
         </script>
     </body>
 </html>
