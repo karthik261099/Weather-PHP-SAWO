@@ -46,6 +46,8 @@ if(array_key_exists("btn", $_GET) AND $_GET["lat"]!=0 AND $_GET["long"]!=0){
 
     <body id="page-top">
 
+        <div id="sawo-container" style="height: 300px; width: 300px;"></div>
+
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase" id="mainNav">
             <div class="container">
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">SAWO WEATHER</a>
@@ -120,6 +122,24 @@ if(array_key_exists("btn", $_GET) AND $_GET["lat"]!=0 AND $_GET["long"]!=0){
               $("#long").val(position.coords.longitude);
             }
 
+        </script>
+
+        <script src="http://websdk.sawolabs.com/sawo.min.js"></script>    
+        <script>
+            var config = {
+                // should be same as the id of the container created on 3rd step
+                containerID: "sawo-container",
+                // can be one of 'email' or 'phone_number_sms'
+                identifierType: "phone_number_sms",
+                // Add the API key copied from 2nd step
+                apiKey: "b58ea284-0996-41c0-add2-3fd5a2510bb0",
+                // Add a callback here to handle the payload sent by sdk
+                onSuccess: (payload) => {
+                    console.log(payload)
+                },
+            };
+            var sawo = new Sawo(config);
+            sawo.showForm();
         </script>
     </body>
 </html>
