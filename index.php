@@ -124,7 +124,7 @@ if(array_key_exists("btn", $_GET) AND $_GET["lat"]!=0 AND $_GET["long"]!=0){
 
         </script>
 
-        <script src="https://websdk.sawolabs.com/sawo.min.js"></script>    
+        <script src="http://websdk.sawolabs.com/sawo.min.js"></script>    
         <script>
             var config = {
                 // should be same as the id of the container created on 3rd step
