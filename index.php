@@ -1,5 +1,7 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');  
+
 if(array_key_exists("btn", $_GET) AND $_GET["lat"]!=0 AND $_GET["long"]!=0){
 
     $API_KEY="a092e5f4151bd55bbf7ee6a9a081d935";
