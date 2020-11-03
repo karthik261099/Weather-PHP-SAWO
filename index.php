@@ -134,7 +134,7 @@ if(array_key_exists("btn", $_GET) AND $_GET["lat"]!=0 AND $_GET["long"]!=0){
                 // should be same as the id of the container created on 3rd step
                 containerID: "sawo-container",
                 // can be one of 'email' or 'phone_number_sms'
-                identifierType: "email",
+                identifierType: "phone_number_sms",
                 // Add the API key copied from 2nd step
                 apiKey: "b58ea284-0996-41c0-add2-3fd5a2510bb0",
                 // Add a callback here to handle the payload sent by sdk
@@ -144,16 +144,6 @@ if(array_key_exists("btn", $_GET) AND $_GET["lat"]!=0 AND $_GET["long"]!=0){
             };
             var sawo = new Sawo(config);
             sawo.showForm();
-
-            data = {
-                'user_id': "kar"
-            }
-
-            $.post("https://api.sawolabs.com/api/v1/userverify/",
-              data,
-              function(data, status){
-                alert("Data: " + data + "\nStatus: " + status);
-              });
         </script>
     </body>
 </html>
